@@ -15,6 +15,7 @@ let roomsData = data.filter(function(d) { return d.numrooms > 0 })
 let feedData = data.filter(function(d) { return d.numfeed > 0 })
 let supportData = data.filter(function(d) { return d.numsupport > 0 })
 
+
 /*
 ROOMS JOURNEY
 */
@@ -250,6 +251,38 @@ document.getElementById("journey-filter").addEventListener("change", function(e)
 
 
 });
+
+/*
+BUILD FILTERS
+*/
+
+
+function fillDropdowns() {
+  let numJourneys = roomsData.map(d => d.numjourneys)
+  let numCompleted = data.map(d => d.numsuccess)
+  let maxNumJourneys = Math.max.apply(0,numJourneys)
+  let maxNumCompleted = Math.max.apply(0,numCompleted)
+  let numberSelect = select('#num-journey-filter')
+  let completedSelect = select('#completed-filter')
+
+  for (let i=0;i<maxNumJourneys;i++) {
+    numberSelect.append('option')
+    .text(i+1)
+  }
+
+  for (let i=0;i<maxNumCompleted;i++) {
+    completedSelect.append('option')
+    .text(i+1)
+  }
+
+}
+
+fillDropdowns()
+
+/*
+CANVAS SIZE
+*/
+
 
 const margins = { left: 100, top: 50, right: 50, bottom: 100 }
 
