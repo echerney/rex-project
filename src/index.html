@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>Rex</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+</head>
+<body>
+  <h1>MemEx Web Behavior</h1>
+  <center>
+    <select required name="Filter by Journey" id="journey-filter" class="selectBox" >
+      <option value="" disabled selected>Filter by Journey</option>
+      <option value="rooms">Rooms</option>
+      <option value="feed">Feed</option>
+      <option value="support">Support</option>
+      <option value="none">None</option>
+    </select>
+    <select name="Filter by Number" id="num-journey-filter" class="selectBox">
+      <option value="" disabled selected>Number of Journeys</option>
+    </select>
+    <select name="Filter by Completed" id="completed-filter" class="selectBox">
+      <option value="" disabled selected>Number Completed</option>
+    </select>
+  </center>
+  <div id="legend">
+    <h3>Legend</h3>
+    <div class="legendCircle" style="background-color:#fff"></div> App Home <br>
+    <div class="legendCircle" style="background-color:#e8f4f7;"></div>
+    <div class="legendCircle" style="background-color:#a3d4e2;"></div>
+    <div class="legendCircle" style="background-color:#5eb4cd;"></div>
+    <div class="legendCircle" style="background-color:#0d4a5c;"></div> Rooms <br>
+    <div class="legendCircle" style="background-color:#f7ebe8;"></div>
+    <div class="legendCircle" style="background-color:#e2b1a3;"></div>
+    <div class="legendCircle" style="background-color:#bf5130;"></div> Feed <br>
+    <div class="legendCircle" style="background-color:#e8f7eb;"></div>
+    <div class="legendCircle" style="background-color:#a3e2b1;"></div>
+    <div class="legendCircle" style="background-color:#0d5c1f;"></div> Support <br><br>
+    <div class="legendCircle" style="border:1px solid #000"></div> Transition <br>
+    <div class="legendCircle" style="border:1px solid gold"></div> Success <br>
+  </div>
+  <div id="chart"></div>
+  <div id="tooltip"></div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
