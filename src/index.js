@@ -16,13 +16,14 @@ let feedData = data.filter(function(d) { return d.numfeed > 0 })
 let supportData = data.filter(function(d) { return d.numsupport > 0 })
 
 
-/*
-ROOMS JOURNEY
-*/
 
 document.getElementById("journey-filter").addEventListener("change", function(e){
   let val = document.getElementById("journey-filter").value
   console.log(val)
+
+  /*
+  ROOMS JOURNEY
+  */
 
   if (val == 'rooms') {
     const sessions = roomsData.map(d => d.session_uuid)
@@ -80,6 +81,11 @@ document.getElementById("journey-filter").addEventListener("change", function(e)
         .style('opacity', 0)
       })
   } else if (val == 'support') {
+
+    /*
+    SUPPORT JOURNEY
+    */
+
     const sessions = supportData.map(d => d.session_uuid)
     const steps = data.map(d => d.t)
     const sessionsScaleYAxis = scaleBand().domain(sessions).range([supportData.length * 9, 0])
@@ -136,6 +142,11 @@ document.getElementById("journey-filter").addEventListener("change", function(e)
         .style('opacity', 0)
       })
   } else if (val == 'feed') {
+
+    /*
+    FEED JOURNEY
+    */
+
     const sessions = feedData.map(d => d.session_uuid)
     const steps = data.map(d => d.t)
     const sessionsScaleYAxis = scaleBand().domain(sessions).range([feedData.length * 6, 0])
@@ -270,9 +281,9 @@ function fillDropdowns() {
     .text(i+1)
   }
 
-  for (let i=0;i<maxNumCompleted;i++) {
+  for (let i=0;i<=maxNumCompleted;i++) {
     completedSelect.append('option')
-    .text(i+1)
+    .text(i)
   }
 
 }
@@ -289,7 +300,7 @@ const margins = { left: 100, top: 50, right: 50, bottom: 100 }
 const fullWidth = +select('body').node().getBoundingClientRect().width
 const fullHeight = +select('body').node().getBoundingClientRect().height
 
-const height = (fullHeight * 3) - margins.top - margins.bottom
+const height = (fullHeight * 6.5) - margins.top - margins.bottom
 const width = (fullWidth * .85) - margins.left - margins.right
 
 
