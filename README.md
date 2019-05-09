@@ -2,6 +2,10 @@
 
 This app was created as part of an interview for the Rex team. It is a rough vizualization of member behavior on our Member App.
 
+## Preview
+
+![Preview](memex-gif.gif)
+
 Currently filtering is live for the journeys, and filters are built for the number of journeys and the number of successes in a session.
 
 The data was pulled from the playground_memex.app_sessions_sample table from Redshift and saved to the app as a csv. 
