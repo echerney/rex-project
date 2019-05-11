@@ -5,9 +5,14 @@ body {
   height: 100vh;
 }
 
+#container {
+  height:60vh;
+  width: 60vw;
+  overflow:scroll;
+}
+
 svg {
   position: absolute;
-  overflow:scroll
 }
 
 h1 {
