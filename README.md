@@ -4,7 +4,7 @@ This app was created as part of an interview for the Rex team. It is a rough viz
 
 ## Preview
 
-![Preview](memex-gif.gif)
+![app](memex-app.gif)
 
 Currently filtering is live for the journeys, and filters are built for the number of journeys and the number of successes in a session.
 
