@@ -81,7 +81,6 @@ function renderData(journeyVal,numJourneyVal,completedVal){
     let filterByJourney = function (journeyVal){
       if (journeyVal == 'rooms') {
         stepOneData = data.filter(function(d) { return d.numrooms > 0 })
-        console.log("this runs")
       } else if (journeyVal == 'feed') {
         stepOneData = data.filter(function(d) { return d.numfeed > 0 })
       } else if (journeyVal == 'support') {
