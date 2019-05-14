@@ -6,7 +6,29 @@ This app was created as part of an interview for the Rex team. It is a rough viz
 
 ![app](memex-app.gif)
 
-Currently filtering is live for the journeys, and filters are built for the number of journeys and the number of successes in a session.
+### Goals of the project
+
+When considering what to build, I decided to approach it as something that could help our UX designers and user researchers to identify points of friction or places that members might be taking more steps than necessary to complete their journeys. 
+
+Some of the specific questions I looked to answer were:
+- Where are users backtracking when approaching a completion action (demonstrated by the stream of bubbles getting darker, then lighter again)?
+- Where are users dropping off in the midst of a journey (demonstrated when a stream of bubbles does not end in a gold-circled bubble, but a black one)?
+- How similar is user behavior when on a specific journey (demonstrated by being able to sort by journey)?
+
+The application allows you to filter by:
+1. If a user has engaged in a specific type of journey
+2. How many journeys a user has engaged in, at a minimum (eg: if filtering by 2, you are showing users that have engaged in at least 2 journeys)
+3. How many journeys a user has completed, at a minimum (eg: if filtering by 2, you are showing users that have completed at least 2 journeys)
+
+### Getting the project locally
+Dependencies: npm
+1. Clone repository locally
+2. `npm install`
+3. `npm run build`
+4. `npm run start`
+
+
+### Source of the Data
 
 The data was pulled from the playground_memex.app_sessions_sample table from Redshift and saved to the app as a csv. 
 Because the session_uuid in the table turned out to not be unique to a single user, I ended up concatonating the session_uuid and user_uuid to create a unique identifier per session.
