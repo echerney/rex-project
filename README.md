@@ -6,7 +6,7 @@ Within the app, different journeys are represented by different color gradients,
 
 On hover, the app will show more information on the action and the engaged user.
 
-## Preview
+### Preview
 
 ![app](memex-app.gif)
 
