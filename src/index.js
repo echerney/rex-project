@@ -182,14 +182,6 @@ function renderData(journeyVal,numJourneyVal,completedVal){
 
 }
 
-margins = { left: 100, top: 50, right: 50, bottom: 100 }
-fullWidth = +select('body').node().getBoundingClientRect().width
-fullHeight = +select('body').node().getBoundingClientRect().height
-height = 500
-width = 400
-
-
-
 /*
 TOOLTIP
 */
