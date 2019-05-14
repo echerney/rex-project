@@ -1,7 +1,6 @@
 import { axisBottom, axisLeft } from 'd3-axis'
 import { scaleBand, scaleOrdinal } from 'd3-scale'
 import { event, select, selectAll } from 'd3-selection'
-import 'd3-transition'
 import './style.css'
 import data from '../data/memex-data.csv'
 
