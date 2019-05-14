@@ -46,7 +46,6 @@ document.getElementById("journey-filter").addEventListener("change", function(e)
   let journeyVal = document.getElementById("journey-filter").value
   let numJourneyVal = document.getElementById("num-journey-filter").value
   let completedVal = document.getElementById("completed-filter").value
-  console.log(journeyVal, numJourneyVal,completedVal)
   renderData(journeyVal,numJourneyVal,completedVal)
 })
 
@@ -54,16 +53,14 @@ document.getElementById("num-journey-filter").addEventListener("change", functio
   let journeyVal = document.getElementById("journey-filter").value
   let numJourneyVal = document.getElementById("num-journey-filter").value
   let completedVal = document.getElementById("completed-filter").value
-  console.log(journeyVal, numJourneyVal,completedVal)
-    renderData(journeyVal,numJourneyVal,completedVal)
+  renderData(journeyVal,numJourneyVal,completedVal)
 })
 
 document.getElementById("completed-filter").addEventListener("change", function(e){
   let journeyVal = document.getElementById("journey-filter").value
   let numJourneyVal = document.getElementById("num-journey-filter").value
   let completedVal = document.getElementById("completed-filter").value
-  console.log(journeyVal, numJourneyVal,completedVal)
-    renderData(journeyVal,numJourneyVal,completedVal)
+  renderData(journeyVal,numJourneyVal,completedVal)
 })
 
 function renderData(journeyVal,numJourneyVal,completedVal){
@@ -83,7 +80,6 @@ function renderData(journeyVal,numJourneyVal,completedVal){
       }
     }
     filterByJourney(journeyVal)
-    console.log("step one", stepOneData)
   }
   let stepTwoData = stepOneData
   //FILTERING DATA BY NUMBER OF JOURNEYS
@@ -103,7 +99,6 @@ function renderData(journeyVal,numJourneyVal,completedVal){
     filterByCompleted(completedVal)
   }
   filteredData = stepThreeData
-  console.log("filtered: ",filteredData)
 
 
 
